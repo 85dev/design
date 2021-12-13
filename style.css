@@ -1,0 +1,164 @@
+body {
+  background-color: rgb(26, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: 'Source Serif Pro', serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+img {
+  padding: 0 0.5em 0 0.5em;
+}
+
+img:hover{
+  transition: 0.3s;
+  transform: scale(1.03);
+}
+
+.nav {
+  margin-left: -2em;
+}
+
+.card--img {
+  width: 16em;
+  height: 8em;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.portfolio {
+  font-weight: 500;
+	animation: blur 3s linear;
+	-webkit-animation: blur 3s linear;
+}
+
+.card h2 {
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Source Serif Pro', serif;
+}
+
+.card--logo {
+  width: 10em;
+  text-align: center;
+}
+
+.card--logo:hover {
+  transition: 0.8s;
+  animation: shake 0.5s infinite;
+}
+
+.container {
+  margin: 10px auto 0;
+  display: grid;
+  padding: 0 20px;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgb(51, 53, 65);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  min-width: 250px;
+  min-height: 50px;
+  border-radius: 1em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: large;
+}
+
+.card li {
+  font-family: 'Source Serif Pro';
+}
+
+.card:hover {
+  box-shadow: 0em 0em 0.6em 0.1em rgb(177, 177, 177);
+  transition: 0.5s;
+}
+
+.card ul {
+  list-style: none;
+  text-align: center;
+  margin-right: 2.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+  @keyframes shake {
+            0% {
+                transform: translate(1px, 1px) rotate(0deg);
+            }
+            10% {
+                transform: translate(-1px, -2px) rotate(-1deg);
+            }
+            20% {
+                transform: translate(-3px, 0px) rotate(1deg);
+            }
+            30% {
+                transform: translate(3px, 2px) rotate(0deg);
+            }
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+            50% {
+                transform: translate(-1px, 2px) rotate(-1deg);
+            }
+            60% {
+                transform: translate(-3px, 1px) rotate(0deg);
+            }
+            70% {
+                transform: translate(3px, 1px) rotate(-1deg);
+            }
+            80% {
+                transform: translate(-1px, -1px) rotate(1deg);
+            }
+            90% {
+                transform: translate(1px, 2px) rotate(0deg);
+            }
+            100% {
+                transform: translate(1px, -2px) rotate(0deg);
+            }
+        }
+
+@media (max-width: 800px) {
+  body {
+    font-weight: 300;
+    font-size: xx-small;
+    max-width: 100%;
+  }
+
+  .card--logo {
+    min-width: 10px;
+  }
+
+  .card {
+    width: 100%;
+    grid-auto-columns: auto;
+    height: auto;
+  }
+
+  .card--img {
+    min-width: 20px;
+  }
+
+  nav ul {
+    width: auto;
+    flex-direction: column;
+  }
+}
